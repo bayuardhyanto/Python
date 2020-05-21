@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 #Python with Operating system, check connection
-from network import *
 import shutil
 import psutil
+from network import *
+
 def check_disk_usage(disk):
     """Verifies that there's enough free space on disk"""
     du = shutil.disk_usage(disk)
@@ -21,3 +22,4 @@ elif check_localhost() and check_connectivity():
     print("Everything ok")
 else:
     print("Network check failed")
+    
